@@ -34,4 +34,12 @@ Column Names and Descriptions
   Customers who canceled their subscription within 6 months
 
   Average subscription duration for all customers
+
+  Customers with subscriptions longer than 12 month
+
+  Total revenue by subscription type
+
+  Top 3 regions by subscription cancellations
+
+  Total number of active and canceled subscriptions
   
