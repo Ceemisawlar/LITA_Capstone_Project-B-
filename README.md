@@ -30,6 +30,19 @@ Column Names and Descriptions
   ## Stastistical Analysis
   
   Most popular subscription type by the number of customers
+
+  SELECT top 1
+subscriptiontype,
+COUNT(customerid) AS num_customers
+FROM 
+LITAcustomers2
+GROUP BY 
+subscriptiontype
+ORDER BY 
+num_customers DESC
+
+![Uploading image.png…]()
+
   
   Customers who canceled their subscription within 6 months
 
