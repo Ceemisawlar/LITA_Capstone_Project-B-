@@ -30,5 +30,8 @@ Column Names and Descriptions
   ## Stastistical Analysis
   
   Most popular subscription type by the number of customers
+  
   Customers who canceled their subscription within 6 months
+
+  Average subscription duration for all customers
   
