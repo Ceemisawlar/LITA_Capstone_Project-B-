@@ -41,18 +41,35 @@ subscriptiontype
 ORDER BY 
 num_customers DESC
 
-![Uploading image.png…]()
+![image](https://github.com/user-attachments/assets/31dd6591-ea6e-47ff-916e-b15458d2c85a)
 
   
   Customers who canceled their subscription within 6 months
 
   Average subscription duration for all customers
 
+  
+
   Customers with subscriptions longer than 12 month
 
   Total revenue by subscription type
 
   Top 3 regions by subscription cancellations
+
+  SELECT TOP 3 
+Region,
+COUNT(CustomerID) AS CancellationCount
+FROM 
+LITAcustomers2
+WHERE 
+Canceled = 1
+GROUP BY 
+Region
+ORDER BY 
+CancellationCount DESC;
+
+![Uploading image.png…]()
+
 
   Total number of active and canceled subscriptions
   
