@@ -54,7 +54,6 @@ num_customers DESC
 
   Total revenue by subscription type
 
-  
 SELECT 
 SubscriptionType,
 SUM(Revenue) AS TotalRevenue
@@ -87,4 +86,21 @@ CancellationCount DESC;
 
 
   Total number of active and canceled subscriptions
-  
+SELECT 'Active' AS SubscriptionStatus, 
+COUNT(CustomerID) AS Count
+FROM 
+LITAcustomers2
+WHERE 
+Canceled = 0
+UNION ALL
+SELECT 
+'Canceled' AS SubscriptionStatus, 
+COUNT(CustomerID) AS Count
+FROM 
+LITAcustomers2
+WHERE 
+Canceled = 1;
+
+![image](https://github.com/user-attachments/assets/9cf21b7c-b112-401b-8e8f-3bbc82431132)
+
+ 
