@@ -31,7 +31,7 @@ Column Names and Descriptions
   
   Most popular subscription type by the number of customers
 
-  SELECT top 1
+ SELECT top 1
 subscriptiontype,
 COUNT(customerid) AS num_customers
 FROM 
@@ -41,7 +41,7 @@ subscriptiontype
 ORDER BY 
 num_customers DESC
 
-![image](https://github.com/user-attachments/assets/31dd6591-ea6e-47ff-916e-b15458d2c85a)
+![image](https://github.com/user-attachments/assets/5da3d695-553d-40ba-aade-127a160acde8)
 
   
   Customers who canceled their subscription within 6 months
@@ -53,6 +53,20 @@ num_customers DESC
   Customers with subscriptions longer than 12 month
 
   Total revenue by subscription type
+
+  
+SELECT 
+SubscriptionType,
+SUM(Revenue) AS TotalRevenue
+FROM 
+LITAcustomers2
+GROUP BY 
+SubscriptionType
+ORDER BY 
+TotalRevenue DESC;
+
+![image](https://github.com/user-attachments/assets/d17e09f0-f06b-4669-9592-7a0ee69e9622)
+
 
   Top 3 regions by subscription cancellations
 
@@ -68,7 +82,8 @@ Region
 ORDER BY 
 CancellationCount DESC;
 
-![Uploading image.png…]()
+![image](https://github.com/user-attachments/assets/a796e2ff-b597-421f-bb1b-a22deed80b88)
+
 
 
   Total number of active and canceled subscriptions
